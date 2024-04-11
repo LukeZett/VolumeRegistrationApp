@@ -1,13 +1,5 @@
 #include <iostream>
 #include "VolumeRegistration.h"
-#include "Difference.h"
-#include "Registration.h"
-
-#include "itkImageRegistrationMethodv4.h"
-#include "itkTranslationTransform.h"
-#include "itkMeanSquaresImageToImageMetricv4.h"
-#include "itkRegularStepGradientDescentOptimizerv4.h"
-
 
 int main() {
 	auto fixed = DcmReader(std::filesystem::path("E:") / "VolumeData" / "716" / "716^716_716_CT_2013-04-02_230000_716-1-01_716-1_n81__00000");
