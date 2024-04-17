@@ -8,6 +8,10 @@ int main() {
 	auto registration = Registration();
 	registration.SetFixed(fixed.GetOutput());
 	registration.SetMoving(moving.GetOutput());
+
+	auto monitoring = RegistrationMonitoring::New();
+	registration.GetOptimizer()->AddObserver(itk::IterationEvent(), monitoring);
+	
 	auto transform = registration.Register();
 	
 	auto diff = Difference();
@@ -15,6 +19,8 @@ int main() {
 	diff.SetMoving(moving.GetOutput());
 	diff.SetTransform(transform);
 	diff.Update();
+
+
 
 	auto w = Export();
 
