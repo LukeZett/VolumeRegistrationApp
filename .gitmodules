@@ -1,3 +1,6 @@
 [submodule "VolumeRegistration"]
 	path = VolumeRegistration
 	url = https://github.com/LukeZett/VolumeRegistration.git
+[submodule "WGPUF"]
+	path = WGPUF
+	url = https://github.com/LukeZett/WGPUF
