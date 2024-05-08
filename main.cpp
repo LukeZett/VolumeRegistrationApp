@@ -41,7 +41,7 @@ int main() {
 	diff.Update();
 
 
-	auto w = Export();
+	auto w = PNGExport();
 
 	w.WriteTo("registeredSpheres", "img", diff.GetOutput());
 
